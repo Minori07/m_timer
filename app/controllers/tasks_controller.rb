@@ -39,6 +39,9 @@ end
 def alarm
 end
 
+def day
+end
+
 private
   def target_task task_id
     current_user.tasks.where(id: task_id).take

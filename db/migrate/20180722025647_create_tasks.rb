@@ -14,10 +14,3 @@ class CreateTasks < ActiveRecord::Migration[5.2]
     end
   end
 end
-
-class toDo
-  def initialize(title, at)
-    @t_title = title
-    @at = at
-  end
-end
