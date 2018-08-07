@@ -1,20 +1,22 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<header>
+  <div class="temp_menu">
+    <%= link_to image_tag('plus.png'), new_task_path %>
+    <h1><%= @task.title %></h1>
+    <%= image_tag "dust.png" %>
+  </div>
+</header>
+<% @task.todo.each do |t| %>
 <table>
-  <tr>
-    <th>Title</th>
-    <td><%= @task.title %></td></tr>
-  <tr>
-    <th>Week</th>
-    <td><%= @task.week %></td>
+    <td><%= t.t %></td>
   </tr>
   <tr>
   	<th>Time</th>
-    <td><%= @task.time %></td>
+    <td><%= t.at %></td>
   </tr>
-  <tr>
+<!--   <tr>
     <th>User.Email</th>
     <td><%= @task.user.email %></td>
-  </tr>
+  </tr> -->
 </table>
+<% end %>
 <p><%= link_to '一覧に戻る', tasks_url %></p>

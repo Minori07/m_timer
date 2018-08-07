@@ -42,3 +42,7 @@ def task_params
   params.require(:task).permit(:title, :week, :time)
 end
 end
+
+def week
+  @task = target_task
+end

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <header>
     <title>MTimer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -8,7 +8,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-  </head>
+  </header>
 
   <body>
     <nav>
@@ -26,4 +26,12 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
+  <footer>
+    <div class="menu_icon">
+      <%= image_tag "alarm.png" %>
+      <%= image_tag "day.png" %>
+      <%= image_tag "temp.png" %>
+      <%= image_tag "geer.png" %>
+    </div>
+  </footer>
 </html>

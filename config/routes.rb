@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'tasks/index'
+  get 'tasks/week'
   get 'tasks/show'
   get 'tasks/new'
   get 'tasks/edit'

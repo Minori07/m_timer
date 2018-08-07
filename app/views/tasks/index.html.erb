@@ -1,19 +1,27 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
-<table>
-  <tr>
-    <th>Id</th><th>Title</th><th>Week</th><th>Time</th><th></th><th></th>
-  </tr>
+<header>
+  <div class="temp_menu">
+    <%= link_to image_tag('plus.png'), new_task_path %>
+    <h1>テンプレート一覧</h1>
+    <%= image_tag "dust.png" %>
+  </div>
+</header>
+<!-- <table> -->
   <% @tasks.each do |task| %>
+  <%= link_to(task_path(task), class:'list-task') do%>
+    <div class="task">
+      <table>
+    <!-- <%= link_to image_tag('block.png'), edit_task_path(task) %> -->
   <tr>
-    <td><%= task.id %></td>
-    <td><%= task.title %></td>
-    <td><%= task.week %></td>
+    <td><%= link_to image_tag('delete.png'), task_path(task), method: :delete %>
+    <!-- <td><%= task.id %></td> -->
     <td><%= task.time %></td>
-    <td><%= link_to 'Show', task_path(task) %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Delete', task_path(task), method: :delete %></td>
+    <!-- <td><%= task.week %></td> -->
+    <td><%= task.title %></td>
+<!--     <td><%= link_to 'Show', task_path(task) %></td> -->
+    </td>
   </tr>
-  <% end %>
 </table>
-<p><%= link_to 'ToDoの作成', new_task_path %></p>
+  </div>
+  <% end %>
+  <% end %>
+<!-- </table> -->

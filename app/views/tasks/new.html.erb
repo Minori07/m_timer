@@ -1,10 +1,15 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<header>
+  <div class="temp_menu">
+    <%= link_to image_tag('plus.png'), new_task_path %>
+    <h1><%= @task.title %></h1>
+    <%= image_tag "dust.png" %>
+  </div>
+</header>
 <div style="width: 300px;">
   <%= form_for(@task) do |f| %>
   <div>
     <%= f.label :title %>
-    <%= f.text_field :title, size: 50 %>
+    <%= f.text_field :title, size: 20 %>
   </div>
   <div>
     <%= f.label :week %>

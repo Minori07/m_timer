@@ -1,3 +1,53 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+header{
+	background-color: #fb8e7f;
+}
+
+.temp_menu{
+	display: flex;
+	padding: 10px
+}
+
+.temp_menu h1{
+	color: white;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #fb8e7f;
+	padding: 10px;
+}
+
+.menu_icon img{
+	padding: 0px 23px;
+	width: 23%;
+}
+
+.task{
+	background-image: url("block.png");
+	background-position: 20px 20px;
+	padding: 40px;
+}
+
+.task p{
+	margin: 10px;
+}
+
+table tr{
+	margin: 20px;
+}
+
+table img{
+	width: 25px;
+	padding-top: 10px;
+}
