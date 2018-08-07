@@ -4,6 +4,9 @@
 
 
 header{
+	position: fixed;
+	top: 0px;
+	width: 100%;
 	background-color: #fb8e7f;
 }
 
@@ -80,3 +83,10 @@ table img{
 	margin-left: 10px;
 	font-size: 20px;
 }
+.space{
+	padding: 50px;
+}
+ .container{
+ 	padding-bottom: 70px;
+ 	padding-top: 50px;
+ }

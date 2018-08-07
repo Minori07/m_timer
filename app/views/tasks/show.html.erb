@@ -5,18 +5,16 @@
     <%= image_tag "dust.png" %>
   </div>
 </header>
-<% @task.todo.each do |t| %>
 <table>
-    <td><%= t.t %></td>
+    <td><%= @task.title %></td>
   </tr>
   <tr>
   	<th>Time</th>
-    <td><%= t.at %></td>
+    <td><%= @task.time %></td>
   </tr>
 <!--   <tr>
     <th>User.Email</th>
     <td><%= @task.user.email %></td>
   </tr> -->
 </table>
-<% end %>
 <p><%= link_to '一覧に戻る', tasks_url %></p>
