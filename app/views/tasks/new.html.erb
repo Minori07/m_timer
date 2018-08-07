@@ -1,5 +1,10 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<header>
+  <div class="temp_menu">
+    <%= link_to image_tag('plus.png'), new_task_path %>
+    <h1><%= @task.title %></h1>
+    <%= image_tag "dust.png" %>
+  </div>
+</header>
 <div style="width: 300px;">
   <%= form_for(@task) do |f| %>
   <div>
@@ -8,12 +13,12 @@
   </div>
   <div>
     <%= f.label :week %>
-    <%= f.text_area :week %>
+    <%= f.select :week, [["月", "0"], ["火", "1"],["水", "2"],["木", "3"],["金", "4"],["土", "5"],["日", "6"]],  :prompt => "選択してください" %>
   </div>
   <div>
   	<%= f.label :time %>
-    <%= f.text_area :time %>
-  </div>ß
+    <%= f.time_select :time %>
+  </div>
     <%= f.submit 'Submit' %>
   <% end %>
 </div>

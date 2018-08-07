@@ -6,18 +6,10 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       #タスクの曜日
       t.integer :week, null: true
       # 時間
-      t.datetime :time, null: true
-      # t.toDo[] :todo, null: true
+      t.time :time, null: true
       # userモデルのuser_idに結びつけるため、必要
       t.integer :user_id, null: true
       t.timestamps
     end
-  end
-end
-
-class toDo
-  def initialize(title, at)
-    @t_title = title
-    @at = at
   end
 end
