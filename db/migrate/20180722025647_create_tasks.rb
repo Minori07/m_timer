@@ -7,7 +7,6 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.integer :week, null: true
       # 時間
       t.datetime :time, null: true
-      # t.toDo[] :todo, null: true
       # userモデルのuser_idに結びつけるため、必要
       t.integer :user_id, null: true
       t.timestamps

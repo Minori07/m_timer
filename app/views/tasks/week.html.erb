@@ -5,16 +5,18 @@
   </div>
 </header>
 <div class="task">
-  <table>
-    <tr>
-      <p>月曜日</p>
-    </tr>
-  </table>
+  <%= link_to(week_list_path(0), class:'list-task') do%>
+  <p>月曜日</p>
+  <% end %>
 </div>
 <div class="task">
-  <table>
-    <tr>
-      <p>火曜日</p>
-    </tr>
-  </table>
+  <%= link_to(week_list_path(1), class:'list-task') do%>
+  <p>火曜日</p>
+  <% end %>
+</div>
+
+<div class="task">
+  <%= link_to(week_list_path(2), class:'list-task') do%>
+  <p>水曜日</p>
+  <% end %>
 </div>

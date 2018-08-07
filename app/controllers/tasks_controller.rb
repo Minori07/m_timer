@@ -14,7 +14,7 @@ end
 def create
   @task = current_user.tasks.new task_params
   @task.save!
-  redirect_to @task
+  redirect_to tasks_path
 end
 
 def edit
@@ -39,12 +39,21 @@ end
 def alarm
 end
 
+
 def day
+end
+
+def list
+  @tasks = target_task params[:week]
 end
 
 private
   def target_task task_id
     current_user.tasks.where(id: task_id).take
+  end
+
+  def target_task task_week
+    current_user.tasks.where(week: task_week).order("time")
   end
 
   def task_params
