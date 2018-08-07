@@ -33,16 +33,18 @@ def destroy
   redirect_to tasks_url
 end
 
-private
-def target_task task_id
-  current_user.tasks.where(id: task_id).take
-end
-
-def task_params
-  params.require(:task).permit(:title, :week, :time)
-end
-end
-
 def week
-  @task = target_task
+end
+
+def alarm
+end
+
+private
+  def target_task task_id
+    current_user.tasks.where(id: task_id).take
+  end
+
+  def task_params
+    params.require(:task).permit(:title, :week, :time)
+  end
 end
