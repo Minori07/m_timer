@@ -1,16 +1,48 @@
+<header>
+  <div class="config">アラーム</div>
+</header>
+<div class="container">
 <body>
+	<% t = Time.new %>
+
 	<div class ="alarm_top">
-		<% t = Time.new %>
-		<% str = t.strftime("%H:%M:%S") %>
-		<h2><%= str %></h2>
-		<p>起床</p>
+		<h2 id="RealtimeClockArea2">現在時刻</h2>
+		<p id="atask_top"></p>
 	</div>
-	<div class ="alarm">
-		<p>07:20</p>
-		<p>朝食</p>
-	</div>
-	<div class ="alarm">
-		<p>08:00</p>
-		<p>洗顔</p>
-	</div>
+	<% i = -1 %>
+	<% a = 0 %>
+	<% @tasks.each do |task| %>
+		<% if t.hour == task.time.hour%>
+			<% if t.min < task.time.min %>
+			<% if i>=0  && a==0%>
+			 	<span class="task-title"><%= @tasks[i].title %></span>
+			 	<% a = 1 %>
+			<% elsif i == -1 %>
+				<% a = 1 %>
+			<% end %>
+				<div class ="alarm">
+					<p>
+						<span class="task-hour"><%= task.time.hour %></span>：<span class="task-min"><%= task.time.min %></span>
+					</p>
+					<p><%= task.title %></p>
+				</div>
+			<% end %>
+		<% elsif t.hour < task.time.hour %>
+			<% if i>=0  && a==0%>
+			 	<span class="task-title"><%= @tasks[i].title %></span>
+			 	<% a = 1 %>
+			<% elsif i == -1 %>
+				<% a = 1 %>
+			<% end %>
+			<div class ="alarm">
+				<p>
+					<span class="task-hour"><%= task.time.hour %></span>：<span class="task-min"><%= task.time.min %></span>
+				</p>
+				<p><%= task.title %></p>
+			</div>
+		<% end %>
+		<% i += 1 %>
+	<% end %>
+	<% a = 0 %>
 </body>
+</div>

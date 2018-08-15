@@ -1,0 +1,48 @@
+$(function(){
+   var url = location.pathname
+
+
+   function set2fig(num) {
+      // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+      var ret;
+      if( num < 10 ) { ret = "0" + num; }
+      else { ret = num; }
+      return ret;
+   }
+
+   if(url.indexOf("/tasks/alarm") === 0) {
+      setInterval(function showClock2() {
+
+         var nowTime = new Date();
+
+         var nowHour = set2fig( nowTime.getHours() );
+         var nowMin  = set2fig( nowTime.getMinutes() );
+         var nowSec  = set2fig( nowTime.getSeconds() );
+         var msg = nowHour + ":" + nowMin + ":" + nowSec;
+         $("#RealtimeClockArea2").text(msg);
+
+
+         
+         var $hour = $('.task-hour').first().text();
+         var $min = $('.task-min').first().text();
+         var $msg =$('.task-title').first().text();
+         $("#atask_top").text($msg);
+
+         if (nowHour >= $hour) {
+            if (nowMin >= $min){
+               $('.alarm').first().remove();
+               // var s =  "www.qsl.net/yo5ofh/cw/wav/mm.wav" //実際はとても長い
+               // var audio = new Audio(s);
+               // audio.play();
+
+            }
+         }
+      },1000);
+
+   }
+
+});
+
+
+
+

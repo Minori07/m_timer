@@ -1,22 +1,40 @@
 <header>
-  <div class="temp_menu">
-    <%= link_to image_tag('plus.png'), new_task_path %>
-    <%= image_tag "dust.png" %>
-  </div>
+  <div class="config">テンプレート一覧</div>
 </header>
-<div class="task">
-  <%= link_to(week_list_path(0), class:'list-task') do%>
-  <p>月曜日</p>
-  <% end %>
-</div>
-<div class="task">
-  <%= link_to(week_list_path(1), class:'list-task') do%>
-  <p>火曜日</p>
-  <% end %>
-</div>
-
-<div class="task">
-  <%= link_to(week_list_path(2), class:'list-task') do%>
-  <p>水曜日</p>
-  <% end %>
+<div class="container">
+  <div class="task">
+    <%= link_to(week_list_path(1), class:'list-task') do%>
+    <p>月曜日</p>
+    <% end %>
+  </div>
+  <div class="task">
+    <%= link_to(week_list_path(2), class:'list-task') do%>
+    <p>火曜日</p>
+    <% end %>
+  </div>
+  <div class="task">
+    <%= link_to(week_list_path(3), class:'list-task') do%>
+    <p>水曜日</p>
+    <% end %>
+  </div>
+   <div class="task">
+    <%= link_to(week_list_path(4), class:'list-task') do%>
+    <p>木曜日</p>
+    <% end %>
+  </div>
+   <div class="task">
+    <%= link_to(week_list_path(5), class:'list-task') do%>
+    <p>金曜日</p>
+    <% end %>
+  </div>
+   <div class="task">
+    <%= link_to(week_list_path(6), class:'list-task') do%>
+    <p>土曜日</p>
+    <% end %>
+  </div>
+   <div class="task">
+    <%= link_to(week_list_path(0), class:'list-task') do%>
+    <p>日曜日</p>
+    <% end %>
+  </div>
 </div>

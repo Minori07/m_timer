@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <header>
-    <title>MTimer</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <header>
+    <title>MTimer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </header>
 
   <body>
-    <nav>
-      <% if user_signed_in? %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'サインアップ', new_user_registration_path %>
-        <%= link_to 'ログイン', new_user_session_path %>
-      <% end %>
-      <% if user_signed_in? %>
-      username : <%= current_user.username %>さん
-      <% end %>
-    </nav>
-    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
-  <footer>
-    <div class="menu_icon">
-      <%= image_tag "alarm.png" %>
-      <%= image_tag "day.png" %>
-      <%= image_tag "temp.png" %>
-      <%= image_tag "geer.png" %>
-    </div>
-  </footer>
+  <% if user_signed_in? %>
+    <footer>
+      <div class="foot_icon">
+        <%= link_to image_tag('alarm.png'), tasks_alarm_path %>
+        <%= link_to image_tag('day.png'), tasks_day_path %>
+        <%= link_to image_tag('temp.png'), tasks_week_path %>
+        <%= link_to image_tag('geer.png'), tasks_cfg_path %>
+      </div>
+    </footer>
+  <% end %>
 </html>

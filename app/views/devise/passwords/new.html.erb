@@ -1,3 +1,6 @@
+
+<div class="top">
+	<div class="icon"><%= image_tag "icon.png" %></div>
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -5,7 +8,7 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,style: "background-color: white;border-radius: 5px;margin-bottom: 10px;color:gray;"%>
   </div>
 
   <div class="actions">
@@ -14,3 +17,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<%= link_to 'return_Top', home_index_path %>
+</div>

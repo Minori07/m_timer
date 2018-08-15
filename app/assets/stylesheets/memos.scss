@@ -1,0 +1,15 @@
+// Place all the styles related to the memos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.memo_menu{
+	display: flex;
+	padding: 10px;
+}
+.memo_menu h1{
+	color: white;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-right: 50px;
+	padding-left: 50px;
+}

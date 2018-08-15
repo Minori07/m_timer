@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
     	# タイトル
       t.string :title, null: false
       #タスクの曜日
-      t.integer :week, null: true
+      t.integer :week, null: false
       # 時間
       t.datetime :time, null: true
       # userモデルのuser_idに結びつけるため、必要

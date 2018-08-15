@@ -2,52 +2,89 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+//header
 header{
 	position: fixed;
 	top: 0px;
 	width: 100%;
 	background-color: #fb8e7f;
+	// font-family: 'TsukuARdGothic-Regular',sans-serif;
+	// font-family: 'HanziPen SC',sans-serif;
+	font-family: 'Hannotate SC',sans-serif;
 }
 
 .temp_menu{
 	display: flex;
-	padding: 10px
+	padding: 10px;
 }
 
 .temp_menu h1{
 	color: white;
 	font-size: 20px;
-	padding-top: 10px;
-	padding-right: 50px;
-	padding-left: 50px;
-}
-
-footer{
 	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background-color: #fb8e7f;
-	padding: 10px;
+	top: 20px;
+	left: 40%;
 }
 
-.menu_icon img{
-	padding: 0px 23px;
-	width: 23%;
-}
+ .return_img{
+ 	height: 40px;
+ 	width: 40px;
+ }
+ .check{
+ 	height: 40px;
+ 	width: 40px;
+ 	position: fixed;
+ 	top: 10px;
+ 	right: 20px;
+ }
+ .menu_plus{
+ 	position: fixed;
+ 	top: 10px;
+ 	right: 20px;
+ }
+ .config{
+ 	color: white;
+ 	font-size: 25px;
+ 	padding-top: 15px;
+ 	padding-bottom: 8px;
+ 	text-align: center;
+ }
 
+
+//block
 .task{
-	background-image: url("block.png");
-	background-position: 20px 20px;
-	padding: 40px;
+	// background-image: url("block.png");
+	// background-position: 20px 20px;
+	background-color: #fefdf7;
+	margin: 20px;
+	height: 90px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 25px;
 }
 
 .task p{
-	margin: 10px;
+	padding: 30px;	
 }
 
-table tr{
+.list{
+	// background-image: url("block.png");
+	// background-position: 20px 20px;
+	background-color: #fefdf7;
 	margin: 20px;
+	height: 90px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 25px;
+}
+
+.list p{
+	padding: 30px;	
+}
+
+table{
+	margin: 20px;
+}
+table td{
+	padding-right: 10px;
 }
 
 table img{
@@ -56,9 +93,14 @@ table img{
 }
 
 .alarm_top{
-	background-image: url("block_top.png");
-	background-position: 20px 20px;
-	padding: 40px;
+	// background-image: url("block_top.png");
+	// background-position: 20px 20px;
+	background-color: #fefdf7;
+	margin: 20px;
+	height: 180px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 30px;
+	padding: 20px;
 }
 .alarm_top h2{
 	font-size: 45px;
@@ -71,22 +113,188 @@ table img{
 	text-align: center;
 	padding: 10px;
 }
-
+.task-title{
+	display: none;
+}
 .alarm{
-	background-image: url("block.png");
-	background-position: 20px 20px;
+	background-color: #fefdf7;
+	margin: 20px;
+	height: 90px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 30px;
 	display: flex;
 }
 .alarm p{
-	padding: 45px;
-	margin-top: 5px;
+	padding: 30px 15px;
 	margin-left: 10px;
 	font-size: 20px;
 }
-.space{
-	padding: 50px;
+
+.day_top{
+	background-color: #fefdf7;
+	margin: 20px;
+	height: 150px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 30px;
+	padding: 40px;
 }
+.day_top h2{
+	font-weight: normal;
+	font-size: 30px;
+}
+.day_top h3{
+	text-align: left;
+	font-weight: normal;
+}
+
+.day_middle{
+	background-color: #fefdf7;
+	margin: 20px;
+	height: 220px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 30px;
+}
+
+
+.day_middle table{
+	background-image: url("drop.png");
+	padding-bottom: 15px;
+	font-size: 10px;
+	margin-left: 20%;
+	color: gray;
+	font-family: 'Hannotate SC',sans-serif;
+}
+
+.weather{
+	display: flex;
+}
+
+.weather img{
+	width: 40%;
+	height: 40%;
+	margin: 40px 0px 10px 10px;
+}
+
+.tp{
+	padding-top: 40px;
+	padding-left: 10px;
+}
+.htp{
+	color: #fb8e7f;
+	font-size: 25px;
+}
+
+.ltp{
+	color: #6dacdb;
+	font-size: 20px;
+}
+
+.day_bottom{
+	display: flex;
+}
+.block_s1{
+	background-color: #fefdf7;
+	margin-right: 10px;
+	margin-left: 20px;
+	width: 50%;
+	height: 130px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 25px;
+	font-family: 'Hannotate SC',sans-serif;
+	padding: 10px;
+	font-size: 10px;
+}
+.block_s1 h3{
+	font-size: 15px;
+	color: #fb8e7f;
+	padding-bottom: 5px;
+}
+.block_s1 img{
+	width: 40px;
+}
+
+.block_s2{
+	background-color: #fefdf7;
+	margin-right: 20px;
+	margin-left: 10px;
+	width: 50%;
+	height: 130px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 25px;
+	padding: 10px;
+	font-family: 'Hannotate SC',sans-serif;
+}
+
  .container{
  	padding-bottom: 70px;
- 	padding-top: 50px;
+ 	padding-top: 60px;
+ 	text-align: center;
  }
+.container_u{
+	padding: 10px;
+ 	padding-bottom: 70px;
+ 	padding-top: 60px;
+ 	background-color: #fefdf7;
+ }
+ .user{
+ 	background-color: #fefdf7;
+	margin: 20px;
+	height: 200px;
+	border: 2.3px solid #93d9f6;
+	border-radius: 30px;
+	padding: 30px;
+	font-family: 'Hannotate SC',sans-serif;
+ }
+ .logout{
+ 	background-color: lightgray;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	border-radius: 10px;
+ }
+
+ //box
+ .new_box{
+ 	padding-top: 5px;
+ 	padding-bottom: 20px;
+ 	margin:  10px 0px 15% 15%;
+ 	background-color: #fbfbfb;
+ 	box-shadow: 2px 2px 10px 0px lightgray; 
+ 	border-radius: 20px;
+ 	width: 70%;
+ 	text-align: center;
+ 	position: fixed;
+ 	top: 100px;
+ 	display: none;
+ }
+
+  .edit_box{
+ 	padding-top: 5px;
+ 	padding-bottom: 20px;
+ 	margin:  10px 0px 15% 15%;
+ 	background-color: #fbfbfb;
+ 	box-shadow: 2px 2px 10px 0px lightgray; 
+ 	border-radius: 20px;
+ 	width: 70%;
+ 	text-align: center;
+ 	position: fixed;
+ 	top: 70px;
+ 	display: none;
+ }
+
+ .field{
+ 	margin-bottom: 10px;
+ }
+
+ .field em{
+ 	font-size: 12px;
+ }
+
+.sbm{
+	display: flex;
+	color: blue;
+	font-size: 15px;
+}
+
+.sbm p{
+	padding: 0px 35px;
+}

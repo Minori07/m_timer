@@ -1,0 +1,27 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top{
+	background-color: #fb8e7f;
+	text-align: center;
+	height: 600px;
+	color: white;
+	// font-family: 'Bradley Hand',sans-serif;
+	font-family: 'Courier New',sans-serif;
+	// font-family: 'Papyrus',sans-serif;
+}
+
+.top p{
+	padding: 30px;
+
+}
+.icon img{
+	width: 180px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.form{
+	background-color: white;
+}
+

@@ -14,3 +14,16 @@
  *= require_self
  */
 
+/*footer*/
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #fb8e7f;
+	padding: 5px;
+}
+
+.foot_icon img{
+	padding: 0px 23px;
+	width: 23%;
+}

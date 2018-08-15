@@ -1,7 +1,54 @@
-<div class="day_top">
-	<% t = Time.new %>
-		<% str_y = t.strftime("%Y年") %>
-		<% str = t.strftime("%m月%d日(%w)") %>
-		<h3><%= str_y %></h3>
-		<h2><%= str %></h2>
+<header>
+  <div class="config">今日の情報</div>
+</header>
+<div class="container">
+	<div class="day_top">
+		<% t = Time.new %>
+			<h3><%= yeer = t.strftime("%Y年") %></h3>
+			<% week = ["日","月","火","水","木","金","土"] %>
+			<h2><%= day = t.strftime("%m月%d日(#{week[t.wday]})") %></h2>
+	</div>
+
+	<div class="day_middle">
+	      <div class="weather">
+	      	<%= image_tag @weatherimage %>
+	      	<div class="tp">
+	      		<div class="htp"><%= @hightemp %></div>
+	      		<div class="ltp"><%= @lowtemp %></div>
+	      	</div>
+	      </div>     
+	<table>
+	<tr>
+	    <th align="center"> 時間帯 </th>
+	    <TD align="center"> 00-06 </TD>
+	    <TD align="center"> 06-12 </TD>
+	    <TD align="center"> 12-18 </TD>
+	    <TD align="center"> 18-24 </TD>
+	</tr>
+	<tr>
+	    <th align="center">降水(％)</th>
+	    <TD align="center"> <%= @precip1 %> </TD>
+	    <TD align="center"> <%= @precip2 %> </TD>
+	    <TD align="center"> <%= @precip3 %> </TD>
+	    <TD align="center"> <%= @precip4 %> </TD>
+	</tr>
+	</table>
+	</div>
+
+	<div class="day_bottom">
+		<div class="block_s1">
+			<h3>-熱中症指数-</h3>
+			<p><%= image_tag @heat_image %></p>
+			<p><%= @heat_main %></p>
+			<p><%= @heat_sub %></p>
+		</div>
+		<div class="block_s2">
+			<% @memos.each do |memo| %>
+				<% if Date.today == memo.show_at %>
+					<p><%= memo.content %></p>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+
 </div>

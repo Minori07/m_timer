@@ -1,0 +1,9 @@
+<div class="top">
+	<div class="icon"><%= image_tag "icon.png" %></div>
+	<p>Well come to Monager</p>
+	<% if !user_signed_in? %>
+	<%= image_tag "triangle.png" %><br>
+    <p><%= link_to 'Sign_up', new_user_registration_path %>
+	<%= link_to 'Log_in', new_user_session_path %></p>
+    <% end %>
+</div>

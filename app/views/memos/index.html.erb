@@ -1,0 +1,25 @@
+<header>
+  <div class="temp_menu">
+	    <div class="return_img">
+	    	<%= link_to image_tag('return.png'), tasks_cfg_path %>
+	    </div>
+	    <h1>メモ一覧</h1>
+	    <div class="menu_plus">
+	    	<%= link_to image_tag('plus.png'), new_memo_path %>
+		</div>
+  </div>
+</header>
+<div class="container">
+	<% @memos.each do |memo| %>
+	<div class="task">
+		<%= link_to(edit_memo_path(memo), class:'list-memos') do%>
+		<table>
+			<tr>
+				<td><%= link_to image_tag('delete.png'), memo_path(memo), method: :delete , data: { confirm: '削除しますか？' }%></td>
+				<td><%= memo.show_at.try(:strftime, "%Y/%m/%d") %></td>
+			</tr>
+		</table>
+		<% end %>
+	</div>
+	<% end %>
+</div>
