@@ -5,19 +5,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <header>
+  <head>
     <title>Monager</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="manifest" href="/manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="/manifest.json" />
-<meta name="apple-mobile-web-app-capable" content="yes"></head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="<%=image_path("icon_app.png")%>" />
-  </header>
+  </head>
 
   <body>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
+
   <% if user_signed_in? %>
     <footer>
       <div class="foot_icon">
