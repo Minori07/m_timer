@@ -39,7 +39,7 @@ def week
 end
 
 def alarm
-  @tasks = current_user.tasks.where(week: Time.new.wday).order("time")
+  @tasks = current_user.tasks.where(week: Time.use_zone('Asia/Tokyo') { Time.zone.now }.wday).order("time")
 end
 
 def cfg
