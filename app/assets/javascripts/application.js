@@ -16,7 +16,7 @@
 //= require activestorage
 //= require_tree .
 
-= javascript_include_tag 'application'
+//= javascript_include_tag 'application'
 
 // safari起動させないための記述
 $(function(){
