@@ -10,13 +10,23 @@
 	</div>
 
 	<div class="day_middle">
-	      <div class="weather">
+		<% if @weatherforecast == "晴れ" || @weatherforecast == "雪" %>
+		<div class="weather2">
 	      	<%= image_tag @weatherimage %>
 	      	<div class="tp">
 	      		<div class="htp"><%= @hightemp %></div>
 	      		<div class="ltp"><%= @lowtemp %></div>
 	      	</div>
-	      </div>     
+	      </div> 
+		<% else %>
+	     <div class="weather">
+	      	<%= image_tag @weatherimage %>
+	      	<div class="tp">
+	      		<div class="htp"><%= @hightemp %></div>
+	      		<div class="ltp"><%= @lowtemp %></div>
+	      	</div>
+	      </div> 
+	     <% end %> 	   
 	<table>
 	<tr>
 	    <th align="center"> 時間帯 </th>
