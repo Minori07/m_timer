@@ -15,9 +15,6 @@ $(function(){
 
          var nowTime = new Date();
 
-         var nowYear = set2fig( nowTime.getYear() );
-         var nowMonth = set2fig( nowTime.getMonth() );
-         var nowDay = set2fig( nowTime.getDay() );
          var nowHour = set2fig( nowTime.getHours() );
          var nowMin  = set2fig( nowTime.getMinutes() );
          var nowSec  = set2fig( nowTime.getSeconds() );
@@ -30,8 +27,9 @@ $(function(){
          var $msg =$('.task-title').first().text();
          $("#atask_top").text($msg);
 
-         if (nowHour >= $hour) {
-            if (nowMin >= $min){
+
+         if (nowHour >= Number($hour)) {
+            if (nowMin >= Number($min)){
                $('.alarm').first().remove();
                document.querySelector("#audio").play();
             }
