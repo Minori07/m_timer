@@ -39,14 +39,11 @@ def week
 end
 
 def alarm
+  @time = Time.zone.now
   @tasks = current_user.tasks.where(week: Time.use_zone('Asia/Tokyo') { Time.zone.now }.wday).order("time")
 end
 
 def cfg
-end
-
-def localize(time, zone)
-  I18n.l time.in_time_zone(zone)
 end
 
 def day
@@ -122,7 +119,8 @@ private
   end
 
   def target_week task_week
-    current_user.tasks.where(week: task_week).order("time")
+    @time = Time.zone.now
+    current_user.tasks.where(week: task_week).order("@time")
   end
 
   def task_params
