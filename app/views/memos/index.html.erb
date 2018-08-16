@@ -12,14 +12,12 @@
 <div class="container">
 	<% @memos.each do |memo| %>
 	<div class="task">
-		<%= link_to(edit_memo_path(memo), class:'list-memos') do%>
 		<table>
 			<tr>
-				<td><%= link_to image_tag('delete.png'), memo_path(memo), method: :delete , data: { confirm: '削除しますか？' }%></td>
-				<td><%= memo.show_at.try(:strftime, "%Y/%m/%d") %></td>
+				<td><%= button_to ' ', memo_path(memo), method: :delete ,class: "delete_button", data: { confirm: '削除しますか？' }%></td>
+				<td><%= link_to memo.show_at.try(:strftime, "%Y/%m/%d"), edit_memo_path(memo), class:'list-memos' %></td>
 			</tr>
 		</table>
-		<% end %>
 	</div>
 	<% end %>
 </div>

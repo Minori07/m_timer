@@ -10,17 +10,15 @@
 <!-- <table> -->
 <div class="container">
   <% @tasks.each do |task| %>
-    <%= link_to week_list_path(task.week ,taskId: task.id) do%>
       <div class="list">
         <table>
           <tr>
-            <td><%= link_to image_tag('delete.png'), task_path(task), method: :delete , data: { confirm: '削除しますか？' }%></td>
-            <td><%= task.time.try(:strftime, "%H:%M") %></td>
-            <td><%= task.title %></td>
+            <td><%= button_to ' ', task_path(task), method: :delete ,class: "delete_button", data: { confirm: '削除しますか？' }%></td>
+            <td><%= task.time.try(:strftime, "%H:%M")%></td>
+            <td><%= link_to task.title, week_list_path(task.week ,taskId: task.id)%></td>
           </tr>
         </table>
       </div>
-    <% end %>
   <% end %>
   <div class="plus">
     <%= link_to week_list_path(params[:week], new: 1) do%><%= image_tag('plus_blue.png') %><% end %>
