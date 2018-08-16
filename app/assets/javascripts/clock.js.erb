@@ -21,7 +21,6 @@ $(function(){
          var msg = nowHour + ":" + nowMin + ":" + nowSec;
          $("#RealtimeClockArea2").text(msg);
 
-
          
          var $hour = $('.task-hour').first().text();
          var $min = $('.task-min').first().text();
@@ -31,8 +30,7 @@ $(function(){
          if (nowHour >= $hour) {
             if (nowMin >= $min){
                $('.alarm').first().remove();
-               playmp3.playFile('sound.mp3');
-
+               document.querySelector("#audio").play();
             }
          }
       },1000);

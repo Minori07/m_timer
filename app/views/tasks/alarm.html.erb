@@ -5,17 +5,21 @@
 <body>
 	<% t = Time.new %>
 
+
 	<div class ="alarm_top">
 		<h2 id="RealtimeClockArea2">現在時刻</h2>
 		<p id="atask_top"></p>
 	</div>
+
 	<% i = -1 %>
 	<% a = 0 %>
 	<% @tasks.each do |task| %>
 		<% if t.hour == task.time.hour%>
 			<% if t.min < task.time.min %>
 			<% if i>=0  && a==0%>
-			 	<span class="task-title"><%= @tasks[i].title %></span>
+			 	<span class="task-title">
+			 		<%= audio_tag("sound.mp3",id:"audio") %>
+			 	<%= @tasks[i].title %></span>
 			 	<% a = 1 %>
 			<% elsif i == -1 %>
 				<% a = 1 %>
@@ -29,7 +33,10 @@
 			<% end %>
 		<% elsif t.hour < task.time.hour %>
 			<% if i>=0  && a==0%>
-			 	<span class="task-title"><%= @tasks[i].title %></span>
+			 	<span class="task-title">
+			 		<%= audio_tag("sound.mp3",id:"audio") %>
+			 		<%= @tasks[i].title %>
+			 		</span>
 			 	<% a = 1 %>
 			<% elsif i == -1 %>
 				<% a = 1 %>
