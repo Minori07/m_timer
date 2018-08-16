@@ -31,9 +31,7 @@ $(function(){
          if (nowHour >= $hour) {
             if (nowMin >= $min){
                $('.alarm').first().remove();
-               // var s =  "www.qsl.net/yo5ofh/cw/wav/mm.wav" //実際はとても長い
-               // var audio = new Audio(s);
-               // audio.play();
+               playmp3.playFile('sound.mp3');
 
             }
          }

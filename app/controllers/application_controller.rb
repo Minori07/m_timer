@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
 	    tasks_alarm_path
   	end
 
-	def after_sign_out_path_for(resource_or_scope)
-		home_index_path
-	end
+  	def after_sign_out_path_for(resource_or_scope)
+  		home_index_path
+  	end
 
 end

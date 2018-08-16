@@ -4,7 +4,7 @@
     <div class="return_img">
     <%= link_to image_tag('return.png'), memos_url %>
     </div>
-    <h1><%= f.date_select :show_at, :use_month_numbers=> true %></h1>
+    <h1><%= f.date_select :show_at, :use_month_numbers=> true %><span style="font-size: 8px;">　▼</span></h1>
     <%= button_tag type: :submit do %>
       <div class="check"><%= image_tag "check.png" %></div>
     <% end %>
