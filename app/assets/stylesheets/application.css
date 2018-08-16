@@ -27,3 +27,8 @@ footer{
 	padding: 0px 23px;
 	width: 23%;
 }
+
+/*iosがデフォルト明朝体なので変更*/
+body {
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
+}
