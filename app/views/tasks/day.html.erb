@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="day_top">
-		<%= t = Time.now%>
+		<% t = Time.now%>
 			<h3><%= t.strftime("%Y年") %></h3>
 			<% week = ["日","月","火","水","木","金","土"] %>
 			<h2><%= t.strftime("%m月%d日(#{week[t.wday]})") %></h2>
