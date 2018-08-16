@@ -17,7 +17,7 @@
 			<% if t.min < task.time.min %>
 			<% if i>=0  && a==0%>
 			 	<span class="task-title">
-			 		<%= audio_tag("sound.mp3",id:"audio") %>
+			 		<%= audio_tag("/audios/sound.mp3",id:"audio") %>
 			 	<%= @tasks[i].title %></span>
 			 	<% a = 1 %>
 			<% elsif i == -1 %>
@@ -33,7 +33,7 @@
 		<% elsif t.hour < task.time.hour %>
 			<% if i>=0  && a==0%>
 			 	<span class="task-title">
-			 		<%= audio_tag("sound.mp3",id:"audio") %>
+			 		<%= audio_tag("/audios/sound.mp3",id:"audio") %>
 			 		<%= @tasks[i].title %>
 			 		</span>
 			 	<% a = 1 %>
