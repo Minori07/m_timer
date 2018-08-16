@@ -1,17 +1,17 @@
 <% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
-  "name": "appApp", #アプリの長い名前
-  "short_name": "app", #アプリの短い名前
-  "start_url": "/", #起動時のパス
+  "name": "My Progressive Rails App",
+  "short_name": "Progressive",
+  "start_url": "/",
   "icons": [
     {
-      "src": "<%=image_path("icon_app.png")%>", #アイコン
+      "src": "<%=image_path("icon_app.png")%>",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
-  "theme_color": "#fbb03b", #テーマ
-  "background_color": "#9ce4ff", #起動時の色
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
   "display": "fullscreen",
   "orientation": "portrait"
 }
