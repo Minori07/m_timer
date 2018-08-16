@@ -45,6 +45,10 @@ end
 def cfg
 end
 
+def localize(time, zone)
+  I18n.l time.in_time_zone(zone)
+end
+
 def day
   require 'nokogiri'
     require 'open-uri'

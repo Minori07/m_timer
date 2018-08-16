@@ -3,7 +3,7 @@
 </header>
 <div class="container">
 <body>
-	<% t = Time.current %>
+	<% t = Time.use_zone('Asia/Tokyo') { Time.zone.now } %>
 
 
 	<div class ="alarm_top">
