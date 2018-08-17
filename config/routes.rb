@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'tasks/alarm'
   get 'tasks/day'
   get 'tasks/cfg'
+  get 'tasks/atten'
   get 'tasks/list/:week', to: 'tasks#list', as: 'week_list'
   devise_for :users
   resources :tasks

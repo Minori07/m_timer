@@ -45,6 +45,9 @@ end
 def cfg
 end
 
+def atten
+end
+
 def day
   require 'nokogiri'
     require 'open-uri'
