@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="<%=image_path("icon_app.png")%>" />
   </head>
   <body>
+    <%= audio_tag("sound.mp3",id:"audio") %>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>

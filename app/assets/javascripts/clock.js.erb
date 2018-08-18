@@ -9,6 +9,7 @@ $(function(){
       else { ret = num; }
       return ret;
    }
+   document.querySelector("#audio").load();
 
    var $time = $('.task-hour').first().text() + ":" + $('.task-min').first().text();
 
@@ -35,7 +36,6 @@ $(function(){
             }
          }
          if($time != $hour+":"+$min){
-            document.querySelector("#audio").load();
             document.querySelector("#audio").play();
          }
       },1000);
