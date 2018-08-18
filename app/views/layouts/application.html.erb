@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="<%=image_path("icon_app.png")%>" />
   </head>
   <body>
-    <%= audio_tag("sound.mp3",id:"audio") %>
+    
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
@@ -23,7 +23,7 @@
   <% if user_signed_in? %>
     <footer>
       <div class="foot_icon">
-        <span class="alarm_load"><%= link_to image_tag('alarm.png'), tasks_alarm_path %></span>
+        <%= link_to image_tag('alarm.png'), tasks_alarm_path %>
         <%= link_to image_tag('day.png'), tasks_day_path %>
         <%= link_to image_tag('temp.png'), tasks_week_path %>
         <%= link_to image_tag('geer.png'), tasks_cfg_path %>
