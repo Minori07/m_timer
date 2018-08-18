@@ -28,7 +28,6 @@ $(function(){
          var $min = $('.task-min').first().text();
          var $msg =$('.task-title').first().text();
          $("#atask_top").text($msg);
-         console.log($time+","+$hour+":"+$min);
 
          if (nowHour >= Number($hour)) {
             if (nowMin >= Number($min)){
@@ -36,7 +35,7 @@ $(function(){
             }
          }
          if($time != $hour+":"+$min){
-                  document.querySelector("#audio").play();
+            document.querySelector("#audio").play();
          }
       },1000);
 
