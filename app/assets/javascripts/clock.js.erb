@@ -35,6 +35,7 @@ $(function(){
             }
          }
          if($time != $hour+":"+$min){
+            document.querySelector("#audio").load();
             document.querySelector("#audio").play();
          }
       },1000);
