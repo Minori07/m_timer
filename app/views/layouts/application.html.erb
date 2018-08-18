@@ -23,7 +23,7 @@
   <% if user_signed_in? %>
     <footer>
       <div class="foot_icon">
-        <%= link_to image_tag('alarm.png'), tasks_alarm_path %>
+        <span class="alarm_load"><%= link_to image_tag('alarm.png'), tasks_alarm_path %></span>
         <%= link_to image_tag('day.png'), tasks_day_path %>
         <%= link_to image_tag('temp.png'), tasks_week_path %>
         <%= link_to image_tag('geer.png'), tasks_cfg_path %>

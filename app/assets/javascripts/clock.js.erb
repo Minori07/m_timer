@@ -9,7 +9,10 @@ $(function(){
       else { ret = num; }
       return ret;
    }
-   document.querySelector("#audio").load();
+      $('.alarm_load').click(function(){
+         document.querySelector("#audio").load();
+         console.log("looad");
+      });
 
    var $time = $('.task-hour').first().text() + ":" + $('.task-min').first().text();
 
