@@ -26,14 +26,17 @@ $(function(){
          var $min = $('.task-min').first().text();
          var $msg =$('.task-title').first().text();
          $("#atask_top").text($msg);
+         var $none =$('.none_tasks').first().text();
+         console.log($none);
 
-
-         if (nowHour >= Number($hour)) {
-            if (nowMin >= Number($min)){
-               $('.alarm').first().remove();
-               document.querySelector("#audio").play();
+         // if($none != "none"){
+            if (nowHour >= Number($hour)) {
+               if (nowMin >= Number($min)){
+                  $('.alarm').first().remove();
+                  document.querySelector("#audio").play();
+               }
             }
-         }
+         // }
       },1000);
 
    }
