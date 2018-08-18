@@ -113,7 +113,7 @@ table img{
 	text-align: center;
 	padding: 10px;
 }
-.task-title, .none_tasks{
+.task-title{
 	display: none;
 }
 .alarm{
@@ -316,4 +316,9 @@ table img{
 	margin: 10px;
 	width: 30px;
 	height: 30px;
+}
+
+.attention{
+	margin: 10px;
+	text-align: left;
 }

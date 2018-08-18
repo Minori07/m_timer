@@ -10,6 +10,8 @@ $(function(){
       return ret;
    }
 
+   var $time = $('.task-hour').first().text() + ":" + $('.task-min').first().text();
+
    if(url.indexOf("/tasks/alarm") === 0) {
       setInterval(function showClock2() {
 
@@ -26,17 +28,16 @@ $(function(){
          var $min = $('.task-min').first().text();
          var $msg =$('.task-title').first().text();
          $("#atask_top").text($msg);
-         var $none =$('.none_tasks').first().text();
-         console.log($none);
+         console.log($time+","+$hour+":"+$min);
 
-         // if($none != "none"){
-            if (nowHour >= Number($hour)) {
-               if (nowMin >= Number($min)){
-                  $('.alarm').first().remove();
-                  document.querySelector("#audio").play();
-               }
+         if (nowHour >= Number($hour)) {
+            if (nowMin >= Number($min)){
+               $('.alarm').first().remove();
             }
-         // }
+         }
+         if($time != $hour+":"+$min){
+                  document.querySelector("#audio").play();
+         }
       },1000);
 
    }
