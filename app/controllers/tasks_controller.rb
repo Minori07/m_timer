@@ -96,9 +96,15 @@ def day
     @precip4 =  str[3].inner_text
 
     str = doc.xpath('//dd[@class="heatExpo_info"]').inner_text.split(" ")
-    @heat_image = "heat/" + str[0] + ".png"
-    @heat_main = str[0]
-    @heat_sub = str[1]
+    if str[0] != " "
+      @heat_image = "heat/情報なし.png"
+      @heat_main = "情報なし"
+    else
+      @heat_image = "heat/" + str[0] + ".png"
+      @heat_image = "heat/情報なし.png"
+      @heat_main = str[0]
+      @heat_sub = str[1]
+    end
 
     @memos = current_user.memos
 
