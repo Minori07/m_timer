@@ -22,10 +22,15 @@ footer{
 	background-color: #fb8e7f;
 	padding: 5px;
 }
-
 .foot_icon img{
-	padding: 0px 23px;
-	width: 23%;
+	width: 10vw;
+}
+
+.foot_icon{
+	padding: 1vw 2vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 /*iosがデフォルト明朝体なので変更*/

@@ -12,7 +12,7 @@
 
 	<div class="day_middle">
 		<% if @weatherforecast == "晴れ" || @weatherforecast == "雪" %>
-		<div class="weather2">
+		<div class="weather">
 	      	<%= image_tag @weatherimage %>
 	      	<div class="tp">
 	      		<div class="htp"><%= @hightemp %></div>
@@ -27,7 +27,7 @@
 	      		<div class="ltp"><%= @lowtemp %></div>
 	      	</div>
 	      </div> 
-	     <% end %> 	   
+	     <% end %> 
 	<table>
 	<tr>
 	    <th align="center"> 時間帯 </th>
@@ -54,6 +54,7 @@
 			<p><%= @heat_sub %></p>
 		</div>
 		<div class="block_s2">
+			<h5 style="color: gray">本日のメモ</h5>
 			<% @memos.each do |memo| %>
 				<% if Date.today == memo.show_at %>
 					<p><%= memo.content %></p>

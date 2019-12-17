@@ -34,7 +34,6 @@ def destroy
   redirect_to week_list_path(@task.week)
 end
 
-
 def week
 end
 
@@ -119,6 +118,16 @@ def list
   else
     @task = Task.new
   end
+end
+
+def reset
+  @tasks = target_week params[:week]
+  week = params[:week]
+  @tasks.each do |t|
+    t.destroy
+  end
+
+  redirect_to week_list_path(week)
 end
 
 private

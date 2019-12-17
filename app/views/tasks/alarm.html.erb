@@ -6,7 +6,7 @@
 	<% t = Time.new %>
 
 	<div class ="alarm_top">
-		<h2 id="RealtimeClockArea2">現在時刻</h2>
+		<h2 id="RealtimeClockArea2"><%= Time.new.strftime("%H:%M:%S") %></h2>
 		<p id="atask_top"></p>
 	</div>
 <%= audio_tag("sound.mp3",id:"audio") %>

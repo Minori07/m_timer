@@ -3,8 +3,15 @@ class MemosController < ApplicationController
   	@memos = current_user.memos
   end
 
+  def calendar
+  	@days = []
+  	@t = DateTime.parse(params[:date])
+  	@memos = current_user.memos
+  end
+
   def new
   	@memo = Memo.new
+  	@d = params[:date]
   end
 
   def create

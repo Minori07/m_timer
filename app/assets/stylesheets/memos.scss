@@ -13,3 +13,56 @@
 	padding-right: 50px;
 	padding-left: 50px;
 }
+
+.cale_img img{
+	width: 11vw;
+}
+
+.memos_img img{
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	width: 11vw;
+}
+
+ul{
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	width: 70vw;
+	font-size: 20px;
+	margin: 5px 15vw;
+}
+
+li{
+	list-style: none;
+	padding: 10px;
+}
+
+.month a{
+	text-decoration: none;
+	color: white;
+}
+
+.calendar table{
+	width: 90vw;
+	height: 70vh;
+	background-color: #fefdf7;
+	border: 2.3px solid #93d9f6;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.calendar th{
+	color: #93d9f6;
+	border-bottom: 2.3px dashed #93d9f6;
+}
+
+.calendar a{
+	text-decoration: none;
+	color: black;
+}
+
+.n_memo{
+	color: #fb8e7f;
+}

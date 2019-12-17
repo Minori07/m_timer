@@ -169,11 +169,12 @@ table img{
 
 .weather{
 	display: flex;
+	justify-content: space-between;
+	margin: 0 13vw;
 }
 
 .weather img{
-	width: 40%;
-	height: 40%;
+	width: 13vh;
 	margin: 40px 0px 10px 10px;
 }
 .weather2{
@@ -321,4 +322,10 @@ table img{
 .attention{
 	margin: 10px;
 	text-align: left;
+}
+.reset img{
+	position: absolute;
+	top: 15px;
+	right: 5vw;
+	width: 8vw;
 }
